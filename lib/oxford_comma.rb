@@ -9,6 +9,6 @@ def oxford_comma(array)
     array.map do |fruit|
       "#{fruit}, "
     end 
-    puts "#{array}and #{last}"
+     "#{array}and #{last}"
   end
 end 
