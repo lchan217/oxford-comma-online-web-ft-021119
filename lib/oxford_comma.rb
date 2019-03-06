@@ -1,14 +1,12 @@
+require "pry"
 def oxford_comma(array)
   if array.length == 1 
-    array[0]
-    elsif array.length == 2 
-    "#{array[0]} and #{array[1]}"
-    elsif array.length > 2 
-    last = array[-1]
-    array.pop
-    array.map do |fruit|
-      "#{fruit}, "
-    end 
-     "#{array.join(", ")}, and #{last}"
-  end
-end 
+    array.join 
+  elsif array.length == 2 
+    array.join(" and ")
+  else
+    last = array[-1] #store last element separately 
+    array.pop #delete last element
+    array.join(", ") + ", and #{last}"
+  end 
+end
