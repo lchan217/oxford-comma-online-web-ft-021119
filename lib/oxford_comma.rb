@@ -9,6 +9,6 @@ def oxford_comma(array)
     array.map do |fruit|
       "#{fruit}, "
     end 
-     "#{array}and #{last}"
+     "#{array.join}and #{last}"
   end
 end 
